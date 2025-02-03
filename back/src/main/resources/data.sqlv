@@ -1,0 +1,13 @@
+-- Create Users Table
+ create table users (id bigint not null, email varchar(255), firstname varchar(255), password varchar(255), username varchar(255), primary key (id));
+
+-- Insert Example Data into Users
+INSERT INTO users (id,username, firstname, email) VALUES
+(1,'youssef', 'ftaich', 'youssef@example.com'),
+(2,'asmith', 'Alice', 'alten@example.com');
+ create table user_authorities (user_id bigint not null, authorities enum ('ROLE_ADMIN','ROLE_USER'))
+
+-- Insert Example Data into Roles
+INSERT INTO user_authorities (name) VALUES (2,'ROLE_USER'), (1,'ROLE_ADMIN');
+
+
